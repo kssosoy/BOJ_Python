@@ -1,5 +1,3 @@
 a=int(input())
-ans=""
-for i in range(a):
-  ans+="*"
-  print(ans)
+for j in range(1,a+1):
+    print("*"*j)
