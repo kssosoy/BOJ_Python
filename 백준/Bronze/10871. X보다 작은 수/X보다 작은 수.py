@@ -1,12 +1,5 @@
-import sys
-
-count = 0
-num1 = []
-
-# Input values from the command line
-a, b = map(int, input().split())
-num = list(map(int, input().split()))
-
-for i in range(a):
-    if num[i] < b:
-        print(num[i], end=" ")
+a, b=map(int,input().split())
+c=list(map(int, input().split()))
+for i in range(0,a):
+    if(c[i]<b):
+        print(c[i], end=" ")
