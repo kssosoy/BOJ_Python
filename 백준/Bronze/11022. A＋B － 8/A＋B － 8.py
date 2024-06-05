@@ -1,6 +1,5 @@
 import sys
-
-T = int(input()) #Test case
-for i in range(T):
-        a,b = map(int, sys.stdin.readline().split())
-        print("Case #{}: {} + {} = {}".format(i+1,a,b,a+b))
+a= int(sys.stdin.readline())
+for i in range(0,a):
+    b,c= map(int, sys.stdin.readline().split())
+    print("Case #%d: %d + %d = %d" % (i+1,b,c,b+c))
