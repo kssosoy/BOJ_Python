@@ -1,10 +1,6 @@
-import sys
 num=[]
-max=0
-for i in range(9):
-  a=int(sys.stdin.readline())
-  num.append(a)
-  if a>=max:
-    max=a
-print(max)
-print(num.index(max)+1)
+for i in range(0,9):
+    a=int(input())
+    num.append(a)
+print(max(num))
+print(num.index(max(num))+1)
