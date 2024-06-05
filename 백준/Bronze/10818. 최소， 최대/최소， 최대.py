@@ -1,5 +1,3 @@
-import sys
-a=int(input())
-num=list(map(int, sys.stdin.readline().split()))
-print(min(num),end=" ")
-print(max(num),end=" ")
+a= int(input())
+b=list(map(int,input().split()))
+print(min(b),max(b))
