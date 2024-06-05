@@ -1,12 +1,11 @@
-import sys
-num=[]
-temp=0
-m,n=map(int, sys.stdin.readline().split())
-for i in range(m):
-  num.append(i+1)
-for j in range(n):
-  a,b=map(int,sys.stdin.readline().split())
-  temp=num[a-1:b]
-  temp.reverse()
-  num[a-1:b]=temp
-print(*num)
+a,b=map(int,input().split())
+num = list(range(1, a + 1))
+for i in range(0,b):
+    c,d=map(int, input().split())
+    c -= 1
+    d -= 1
+    while c < d:
+        num[c], num[d] = num[d], num[c]
+        c += 1
+        d -= 1
+print(' '.join(map(str,num)))
