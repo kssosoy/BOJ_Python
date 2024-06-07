@@ -1,18 +1,12 @@
-def check(inputStr):
-    prev=''
-    seen=set()
-    for j in inputStr:
-        if j != prev:
-            if j in seen:
-                return False
-            seen.add(j)
-        prev=j
-    return True
-        
-a=int(input())
-count=0
+a= int(input())
+count=a
 for i in range(a):
-    inputStr= list(input())
-    if(check(inputStr)== True):
-        count+=1
+    b= input()  
+    for j in range(len(b)-1):
+        if(b[j]==b[j+1]):
+            pass
+        elif(b[j] in b[j+1:]):
+            count-=1
+            break
 print(count)
+    
