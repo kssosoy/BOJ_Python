@@ -10,16 +10,18 @@ class Solution {
         int start = 0;
 
         
-        for (int end = 0; end < array.length; end++) {
-            sum += array[end];
-            
-            while (sum > n && start <= end) {
-                sum -= array[start];
-                start++;
-            }
-            
-            if (sum == n) {
-                answer++;
+        for (int j=0; j<array.length; j++){
+            sum=0;
+            for (int k=j; k<array.length; k++){
+                sum+=array[k];
+                if(sum==n){
+                    answer+=1;
+                    continue;
+                }
+                if(sum>n){
+                    break;
+                }
+                
             }
         }
      
