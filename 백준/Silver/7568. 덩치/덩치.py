@@ -1,18 +1,19 @@
 a = int(input())
 num = []
-count = [0] * a 
+count = []
+
 
 for _ in range(a):
     b, c = map(int, input().split())
     num.append([b, c])
 
+
 for i in range(a):
-    prev_x = num[i][0]
-    prev_y = num[i][1]
+    n = 0  
     for j in range(a):
-        if prev_x < num[j][0] and prev_y < num[j][1]:
-            count[i] += 1
+        if num[i][0] < num[j][0] and num[i][1] < num[j][1]:
+            n += 1
+    count.append(n + 1)  
 
 
-for i in range(a):
-    print(count[i] + 1, end=' ')
+print(*count)
