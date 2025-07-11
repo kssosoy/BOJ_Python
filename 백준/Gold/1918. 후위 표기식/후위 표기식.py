@@ -12,7 +12,7 @@ for ch in exp:
         if(len(stack)!=0 and stack[-1]=="("):
             stack.pop()
     elif(ch=="*" or ch=="/"):
-        while len(stack) != 0 and (stack[-1] == "*" or stack[-1] == "/" or stack[-1] == "^"):
+        while len(stack) != 0 and (stack[-1] == "*" or stack[-1] == "/"):
             print(stack.pop(),end="")
         stack.append(ch)
         
