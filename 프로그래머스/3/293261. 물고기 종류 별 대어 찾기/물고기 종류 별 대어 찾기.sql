@@ -1,4 +1,1 @@
-SELECT F.ID, N.FISH_NAME, F.LENGTH FROM FISH_INFO AS F JOIN FISH_NAME_INFO AS N ON F.FISH_TYPE = N.FISH_TYPE WHERE F. LENGTH= (SELECT MAX(LENGTH) FROM FISH_INFO AS F2 WHERE F2.FISH_TYPE = F.FISH_TYPE) ORDER BY F.ID
-
-
-
+select i.id, n.fish_name, i.length from fish_info as i join fish_name_info as n on i.fish_type = n.fish_type where (i.fish_type,i.length) in (select fish_type, max(length) from fish_info group by fish_type)
