@@ -1,0 +1,2 @@
+-- 코드를 입력하세요
+SELECT user_id, nickname, sum(price) as total_sales from used_goods_user as u join used_goods_board as b on u.user_id= b.writer_id where status='DONE' group by b.writer_id, u.nickname having sum(price) >= 700000 order by sum(price) asc
